@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="DataStructure"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lSystemLib">
+				<Option output="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/liblSystemLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 lSystemLib"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lSystemLib/fast">
+				<Option output="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/liblSystemLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 lSystemLib/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main">
+				<Option output="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main/fast">
+				<Option output="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestSuite">
+				<Option output="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/TestSuite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestSuite"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestSuite/fast">
+				<Option output="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/TestSuite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestSuite/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/robbeelsermans/Documents/gitHub/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/include/LSystem/LSystemInterpreter.h">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/include/LSystem/Production.h">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/include/LSystem/Validation.h">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/LSystem/LSystemInterpreter.cpp">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/LSystem/Production.cpp">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/LSystem/Validation.cpp">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/main.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/Production/U_Production.cpp">
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/main.cpp">
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
