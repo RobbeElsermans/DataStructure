@@ -15,13 +15,18 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_library(lSystemLib STATIC
         "lib/L_System/src/Production.cpp"
-        lib/L_System/src/Production.cpp lib/L_System/include/Production.h lib/L_System/src/Validation.cpp lib/L_System/include/Validation.h lib/L_System/src/LSystemInterpreter.cpp lib/L_System/include/LSystemInterpreter.h)
+        lib/L_System/src/Production.cpp
+        lib/L_System/include/Production.h
+        lib/L_System/src/Validation.cpp
+        lib/L_System/include/Validation.h
+        lib/L_System/src/LSystemInterpreter.cpp
+        lib/L_System/include/LSystemInterpreter.h lib/L_System/src/HashFunction.cpp lib/L_System/include/HashFunction.h)
 
 target_include_directories(lSystemLib PUBLIC "include/")
 
 add_executable(main
         "src/main.cpp"
-        lib/L_System/src/Production.cpp lib/L_System/include/Production.h lib/L_System/src/Validation.cpp lib/L_System/include/Validation.h lib/L_System/src/LSystemInterpreter.cpp lib/L_System/include/LSystemInterpreter.h)
+        lib/L_System/src/Production.cpp lib/L_System/include/Production.h lib/L_System/src/Validation.cpp lib/L_System/include/Validation.h lib/L_System/src/LSystemInterpreter.cpp lib/L_System/include/LSystemInterpreter.h lib/L_System/src/HashFunction.cpp lib/L_System/include/HashFunction.h)
 
 target_include_directories(main PUBLIC
         "include/"
@@ -35,7 +40,7 @@ add_executable(TestSuite
         lib/L_System/include/Validation.h
         lib/L_System/src/LSystemInterpreter.cpp
         lib/L_System/include/LSystemInterpreter.h
-        test/L_System/U_Production.cpp test/L_System/U_Validation.cpp)
+        test/L_System/U_Production.cpp test/L_System/U_Validation.cpp lib/L_System/src/HashFunction.cpp lib/L_System/include/HashFunction.h test/L_System/U_HashFunction.cpp)
 
 target_include_directories(TestSuite PUBLIC
         "include/"

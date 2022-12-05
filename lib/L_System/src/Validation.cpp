@@ -39,17 +39,25 @@ bool isValidProduction(const Production<SymbolType> &production, const std::unor
     return isInPredecessor && isInSuccessor;
 }
 
+template <typename SymbolType>
+bool isUniqueProductionSet(const std::unordered_set<Production<SymbolType>>& production){
+    //The counter may never be greater than 1 because if it is greater than 1, duplicated successors are in the set.
+    std::unordered_set<Production<SymbolType>> p = production;
+    size_t counter = 0;
+
+    for(Production<SymbolType> value : p){
+
+        for(Production<SymbolType> value2 : p){
+            if(value2.getSuccessor() == value.getSuccessor())
+            {
+                ++counter;
+            }
+        }
+    }
+
+    return false;
+}
 
 //Explicit declaration
 template bool isValidProduction(const Production<char> &production, const std::unordered_set<char> &alphabet);
-
-/*{
-    //check if all values are in the alphabet
-    //L_System<char> p = production;
-    //test itteration
-    for(char value : alphabet){
-        std::cout << value << std::endl;
-    }
-    return false;
-}
- */
+template bool isUniqueProductionSet(const std::unordered_set<Production<char>>& production);

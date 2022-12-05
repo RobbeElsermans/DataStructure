@@ -21,4 +21,4 @@ std::vector<SymbolType> Production<SymbolType>::getSuccessor() {
 }
 
 
-template class Production<char>;//(char predecessor, std::vector<char> successor);
+template class Production<char>;

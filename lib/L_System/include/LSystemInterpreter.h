@@ -17,10 +17,12 @@ class LSystemInterpreter {
 public:
 // This constructor takes an axiom, a set of productions and
 // an alphabet and stores these in the fields.
+
 // It should check that all productions are valid using
 // the “isValidProduction” function above.
 // If any of the productions are invalid,
 // it should throw an exception.
+
 // The constructor should also check that
 // every production has a unique predecessor.
 // It should also check that there is a L_System for
@@ -31,11 +33,7 @@ public:
    // 1. Throw an exception
 //
   //  2. Add an identity production (A -> A)
-    LSystemInterpreter(
-            const std::vector<SymbolType>& axiom,
-            const std::unordered_set<Production<SymbolType>>& productions,
-            const std::unordered_set<SymbolType>& alphabet
-    );
+    LSystemInterpreter(const std::vector<SymbolType>& axiom, const std::unordered_set<Production<SymbolType>>& productions, const std::unordered_set<SymbolType>& alphabet);
 
 // This function should execute `iterations` iterations of
 // the L-System.
@@ -57,6 +55,13 @@ public:
 // (The first and last A’s were replaced by AB,
 // and the middle B by A)
     std::vector<SymbolType> generate(unsigned long iterations);
+
+private:
+    const std::vector<SymbolType> axiom;
+    const std::unordered_set<Production<SymbolType>> productions;
+    const std::unordered_set<SymbolType> alphabet;
+    //We use vector because we are only including at the end of it.
+    std::vector<SymbolType> generatedSystem;
 };
 
 
