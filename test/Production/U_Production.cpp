@@ -2,7 +2,7 @@
 // Created by robbeelsermans on 12/5/22.
 //
 #include <catch2/catch.hpp>
-#include "LSystem/Production.h"
+#include "../../lib/L_System/include/Production.h"
 
 TEST_CASE("test de constructor"){
     //Create a Production

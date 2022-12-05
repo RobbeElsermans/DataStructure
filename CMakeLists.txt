@@ -14,14 +14,14 @@ set(CMAKE_CXX_STANDARD 14)
 #
 
 add_library(lSystemLib STATIC
-        "src/LSystem/Production.cpp"
-        src/LSystem/Production.cpp include/LSystem/Production.h src/LSystem/Validation.cpp include/LSystem/Validation.h src/LSystem/LSystemInterpreter.cpp include/LSystem/LSystemInterpreter.h)
+        "lib/L_System/src/Production.cpp"
+        lib/L_System/src/Production.cpp lib/L_System/include/Production.h lib/L_System/src/Validation.cpp lib/L_System/include/Validation.h lib/L_System/src/LSystemInterpreter.cpp lib/L_System/include/LSystemInterpreter.h)
 
 target_include_directories(lSystemLib PUBLIC "include/")
 
 add_executable(main
         "src/main.cpp"
-        src/LSystem/Production.cpp include/LSystem/Production.h src/LSystem/Validation.cpp include/LSystem/Validation.h src/LSystem/LSystemInterpreter.cpp include/LSystem/LSystemInterpreter.h)
+        lib/L_System/src/Production.cpp lib/L_System/include/Production.h lib/L_System/src/Validation.cpp lib/L_System/include/Validation.h lib/L_System/src/LSystemInterpreter.cpp lib/L_System/include/LSystemInterpreter.h)
 
 target_include_directories(main PUBLIC
         "include/"
@@ -29,7 +29,13 @@ target_include_directories(main PUBLIC
 
 add_executable(TestSuite
         "test/main.cpp"
-        src/LSystem/Production.cpp include/LSystem/Production.h src/LSystem/Validation.cpp include/LSystem/Validation.h src/LSystem/LSystemInterpreter.cpp include/LSystem/LSystemInterpreter.h test/Production/U_Production.cpp)
+        lib/L_System/src/Production.cpp
+        lib/L_System/include/Production.h
+        lib/L_System/src/Validation.cpp
+        lib/L_System/include/Validation.h
+        lib/L_System/src/LSystemInterpreter.cpp
+        lib/L_System/include/LSystemInterpreter.h
+        test/Production/U_Production.cpp)
 
 target_include_directories(TestSuite PUBLIC
         "include/"

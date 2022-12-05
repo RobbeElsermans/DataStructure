@@ -41,13 +41,59 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/robbe/Documents/GitHub/DataStructure/cmake-build-debug/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target lSystemLib
+
+
+#############################################
+# Order-only phony target for lSystemLib
+
+build cmake_object_order_depends_target_lSystemLib: phony || CMakeFiles/lSystemLib.dir
+
+build CMakeFiles/lSystemLib.dir/lib/L_System/src/Production.cpp.o: CXX_COMPILER__lSystemLib_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Production.cpp || cmake_object_order_depends_target_lSystemLib
+  DEP_FILE = CMakeFiles/lSystemLib.dir/lib/L_System/src/Production.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/lSystemLib.dir
+  OBJECT_FILE_DIR = CMakeFiles/lSystemLib.dir/lib/L_System/src
+
+build CMakeFiles/lSystemLib.dir/lib/L_System/src/Validation.cpp.o: CXX_COMPILER__lSystemLib_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Validation.cpp || cmake_object_order_depends_target_lSystemLib
+  DEP_FILE = CMakeFiles/lSystemLib.dir/lib/L_System/src/Validation.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/lSystemLib.dir
+  OBJECT_FILE_DIR = CMakeFiles/lSystemLib.dir/lib/L_System/src
+
+build CMakeFiles/lSystemLib.dir/lib/L_System/src/LSystemInterpreter.cpp.o: CXX_COMPILER__lSystemLib_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/LSystemInterpreter.cpp || cmake_object_order_depends_target_lSystemLib
+  DEP_FILE = CMakeFiles/lSystemLib.dir/lib/L_System/src/LSystemInterpreter.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/lSystemLib.dir
+  OBJECT_FILE_DIR = CMakeFiles/lSystemLib.dir/lib/L_System/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target lSystemLib
+
+
+#############################################
+# Link the static library liblSystemLib.a
+
+build liblSystemLib.a: CXX_STATIC_LIBRARY_LINKER__lSystemLib_Debug CMakeFiles/lSystemLib.dir/lib/L_System/src/Production.cpp.o CMakeFiles/lSystemLib.dir/lib/L_System/src/Validation.cpp.o CMakeFiles/lSystemLib.dir/lib/L_System/src/LSystemInterpreter.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/lSystemLib.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = liblSystemLib.a
+  TARGET_PDB = lSystemLib.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target main
 
 
 #############################################
 # Order-only phony target for main
 
-build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
+build cmake_object_order_depends_target_main: phony || cmake_object_order_depends_target_lSystemLib
 
 build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/src/main.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/src/main.cpp.o.d
@@ -55,6 +101,27 @@ build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_Debug /home/robbe/D
   INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
+
+build CMakeFiles/main.dir/lib/L_System/src/Production.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Production.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/lib/L_System/src/Production.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/L_System/src
+
+build CMakeFiles/main.dir/lib/L_System/src/Validation.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Validation.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/lib/L_System/src/Validation.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/L_System/src
+
+build CMakeFiles/main.dir/lib/L_System/src/LSystemInterpreter.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/LSystemInterpreter.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/lib/L_System/src/LSystemInterpreter.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/L_System/src
 
 
 # =============================================================================
@@ -64,8 +131,9 @@ build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_Debug /home/robbe/D
 #############################################
 # Link the executable main
 
-build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.o
+build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/lib/L_System/src/Production.cpp.o CMakeFiles/main.dir/lib/L_System/src/Validation.cpp.o CMakeFiles/main.dir/lib/L_System/src/LSystemInterpreter.cpp.o | liblSystemLib.a || liblSystemLib.a
   FLAGS = -g
+  LINK_LIBRARIES = liblSystemLib.a
   OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -79,7 +147,7 @@ build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.o
 #############################################
 # Order-only phony target for TestSuite
 
-build cmake_object_order_depends_target_TestSuite: phony || CMakeFiles/TestSuite.dir
+build cmake_object_order_depends_target_TestSuite: phony || cmake_object_order_depends_target_lSystemLib
 
 build CMakeFiles/TestSuite.dir/test/main.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/main.cpp || cmake_object_order_depends_target_TestSuite
   DEP_FILE = CMakeFiles/TestSuite.dir/test/main.cpp.o.d
@@ -87,6 +155,34 @@ build CMakeFiles/TestSuite.dir/test/main.cpp.o: CXX_COMPILER__TestSuite_Debug /h
   INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
   OBJECT_DIR = CMakeFiles/TestSuite.dir
   OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test
+
+build CMakeFiles/TestSuite.dir/lib/L_System/src/Production.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Production.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/lib/L_System/src/Production.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/TestSuite.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/lib/L_System/src
+
+build CMakeFiles/TestSuite.dir/lib/L_System/src/Validation.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Validation.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/lib/L_System/src/Validation.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/TestSuite.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/lib/L_System/src
+
+build CMakeFiles/TestSuite.dir/lib/L_System/src/LSystemInterpreter.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/LSystemInterpreter.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/lib/L_System/src/LSystemInterpreter.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/TestSuite.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/lib/L_System/src
+
+build CMakeFiles/TestSuite.dir/test/Production/U_Production.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/Production/U_Production.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/test/Production/U_Production.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/TestSuite.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/Production
 
 
 # =============================================================================
@@ -96,8 +192,9 @@ build CMakeFiles/TestSuite.dir/test/main.cpp.o: CXX_COMPILER__TestSuite_Debug /h
 #############################################
 # Link the executable TestSuite
 
-build TestSuite: CXX_EXECUTABLE_LINKER__TestSuite_Debug CMakeFiles/TestSuite.dir/test/main.cpp.o
+build TestSuite: CXX_EXECUTABLE_LINKER__TestSuite_Debug CMakeFiles/TestSuite.dir/test/main.cpp.o CMakeFiles/TestSuite.dir/lib/L_System/src/Production.cpp.o CMakeFiles/TestSuite.dir/lib/L_System/src/Validation.cpp.o CMakeFiles/TestSuite.dir/lib/L_System/src/LSystemInterpreter.cpp.o CMakeFiles/TestSuite.dir/test/Production/U_Production.cpp.o | liblSystemLib.a || liblSystemLib.a
   FLAGS = -g
+  LINK_LIBRARIES = liblSystemLib.a
   OBJECT_DIR = CMakeFiles/TestSuite.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -131,6 +228,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build lSystemLib: phony liblSystemLib.a
+
 # =============================================================================
 # Folder targets.
 
@@ -139,7 +238,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/robbe/Documents/GitHub/DataStructure/cmake-build-debug
 
-build all: phony main TestSuite
+build all: phony liblSystemLib.a main TestSuite
 
 # =============================================================================
 # Built-in targets
