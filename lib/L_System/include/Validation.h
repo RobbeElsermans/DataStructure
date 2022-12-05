@@ -14,9 +14,6 @@
 // If all symbols are in the alphabet, this function returns true,
 // otherwise, this function returns false.
 template <typename SymbolType>
-bool isValidProduction(
-        const Production<SymbolType>& production,
-        const std::unordered_set<SymbolType>& alphabet
-);
+bool isValidProduction(const Production<SymbolType>& production, const std::unordered_set<SymbolType>& alphabet);
 
 #endif //DATASTRUCTURE_VALIDATION_H

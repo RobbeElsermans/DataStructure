@@ -23,7 +23,7 @@ public:
 // it should throw an exception.
 // The constructor should also check that
 // every production has a unique predecessor.
-// It should also check that there is a Production for
+// It should also check that there is a L_System for
 // each symbol in the alphabet.
 // If there is a symbol in the alphabet without a production,
 // you can decide what to do:

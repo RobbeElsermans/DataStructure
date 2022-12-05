@@ -35,7 +35,7 @@ add_executable(TestSuite
         lib/L_System/include/Validation.h
         lib/L_System/src/LSystemInterpreter.cpp
         lib/L_System/include/LSystemInterpreter.h
-        test/Production/U_Production.cpp)
+        test/L_System/U_Production.cpp test/L_System/U_Validation.cpp)
 
 target_include_directories(TestSuite PUBLIC
         "include/"
