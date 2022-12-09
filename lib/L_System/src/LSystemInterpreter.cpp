@@ -3,8 +3,9 @@
 //
 
 #include <stdexcept>
-#include "../include/LSystemInterpreter.h"
-#include "../include/Validation.h"
+#include "../include/LSystemInterpreter.hpp"
+#include "../include/Validation.hpp"
+#include "../include/HelpFunctions.hpp"
 
 
 template<typename SymbolType>
@@ -19,24 +20,28 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const std::vector<SymbolType>
 
     // It should check that all productions are valid using
     // the “isValidProduction” function above.
-    for (SymbolType value: productions) {
-        if (isValidProduction(value, alphabet)) {
-
-        } else {
-            // If any of the productions are invalid,
-            // it should throw an exception.
+    /*
+    for (SymbolType value: forwardIterate(productions.begin(), productions.end())) {
+        /*if (!isValidProduction(value, alphabet)) {
             std::invalid_argument("productions must be valid on the alphabet");
-            break;
-        }
+            while(1);
+        }*/
     }
+    
+    //gebruik dees
+    forwardIterate
 
     // The constructor should also check that
     // every production has a unique predecessor.
-
-
+    if(!isUniqueProductionSet(productions)){
+        std::invalid_argument("productions must be valid on the alphabet");
+        while(1);
+    }
 }
 
 template<typename SymbolType>
 std::vector<SymbolType> LSystemInterpreter<SymbolType>::generate(unsigned long iterations) {
     return std::vector<SymbolType>();
 }
+
+template class LSystemInterpreter<char>;

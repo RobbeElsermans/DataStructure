@@ -3,7 +3,8 @@
 //
 
 #include <iostream>
-#include "../include/Validation.h"
+#include "../include/Validation.hpp"
+#include "../include/HelpFunctions.hpp"
 
 
 template<typename SymbolType>
@@ -46,16 +47,21 @@ bool isUniqueProductionSet(const std::unordered_set<Production<SymbolType>>& pro
     size_t counter = 0;
 
     for(Production<SymbolType> value : p){
-
+        counter = 0;
         for(Production<SymbolType> value2 : p){
-            if(value2.getSuccessor() == value.getSuccessor())
+            if(value.getSuccessor() == value2.getSuccessor())
             {
                 ++counter;
+                //std::cout << value.getSuccessor().back() << std::endl;
+                //std::cout << value2.getSuccessor().back() << std::endl;
+                //std::cout << std::endl;
             }
+            if(counter > 1)
+                return false;
         }
     }
 
-    return false;
+    return true;
 }
 
 //Explicit declaration

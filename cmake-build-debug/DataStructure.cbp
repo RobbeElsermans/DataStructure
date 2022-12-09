@@ -176,40 +176,51 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/include/LSystem/LSystemInterpreter.h">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/include/HelpFunctions.hpp">
 			<Option target="lSystemLib"/>
 			<Option target="main"/>
-			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/include/LSystem/Production.h">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/include/LSystemInterpreter.hpp">
 			<Option target="lSystemLib"/>
 			<Option target="main"/>
-			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/include/LSystem/Validation.h">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/include/Production.hpp">
 			<Option target="lSystemLib"/>
 			<Option target="main"/>
-			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/LSystem/LSystemInterpreter.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/include/Validation.hpp">
 			<Option target="lSystemLib"/>
 			<Option target="main"/>
-			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/LSystem/Production.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/src/HelpFunctions.cpp">
 			<Option target="lSystemLib"/>
 			<Option target="main"/>
-			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/LSystem/Validation.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/src/LSystemInterpreter.cpp">
 			<Option target="lSystemLib"/>
 			<Option target="main"/>
-			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/src/Production.cpp">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/lib/L_System/src/Validation.cpp">
+			<Option target="lSystemLib"/>
+			<Option target="main"/>
 		</Unit>
 		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/main.cpp">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/Production/U_Production.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_HelpFunctions.cpp">
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_LSystemInterpreter.cpp">
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_Production.cpp">
+			<Option target="TestSuite"/>
+		</Unit>
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_Validation.cpp">
 			<Option target="TestSuite"/>
 		</Unit>
 		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/main.cpp">
