@@ -3,6 +3,7 @@
 //
 
 #include <stdexcept>
+#include <iostream>
 #include "../include/LSystemInterpreter.hpp"
 #include "../include/Validation.hpp"
 #include "../include/HelpFunctions.hpp"
@@ -20,21 +21,19 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const std::vector<SymbolType>
 
     // It should check that all productions are valid using
     // the “isValidProduction” function above.
-    /*
-    for (SymbolType value: forwardIterate(productions.begin(), productions.end())) {
-        /*if (!isValidProduction(value, alphabet)) {
-            std::invalid_argument("productions must be valid on the alphabet");
+    for (auto i = this->productions.begin(); i != this->productions.end(); ++i) {
+        if(!isValidProduction(static_cast<Production<char>>(*i), this->alphabet)){
+
+            throw std::invalid_argument("productions must be valid on the alphabet");
             while(1);
-        }*/
+            //break;
+        }
     }
-    
-    //gebruik dees
-    forwardIterate
 
     // The constructor should also check that
     // every production has a unique predecessor.
     if(!isUniqueProductionSet(productions)){
-        std::invalid_argument("productions must be valid on the alphabet");
+        throw std::invalid_argument("productions successors must be unique");
         while(1);
     }
 }

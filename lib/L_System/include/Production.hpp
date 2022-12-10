@@ -19,7 +19,9 @@ class Production {
 public:
 
     // contructor
+    Production();   //Empty contructor for returning null
     Production(SymbolType predecessor, std::vector<SymbolType> successor);
+
 
     //get the key
     SymbolType getPredecessor();
@@ -32,7 +34,6 @@ private:
     //De replacements rules
     SymbolType predecessor;
     std::vector<SymbolType> successor;
-
 };
 
 #endif //DATASTRUCTURE_PRODUCTION_HPP

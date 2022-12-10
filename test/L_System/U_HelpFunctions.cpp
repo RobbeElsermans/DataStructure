@@ -2,6 +2,7 @@
 // Created by robbeelsermans on 12/9/22.
 //
 #include <catch2/catch.hpp>
+#include <iostream>
 #include "../../lib/L_System/include/Production.hpp"
 #include "../../lib/L_System/include/HelpFunctions.hpp"
 
@@ -34,4 +35,30 @@ TEST_CASE("Test randomness hashFunction")
     //std::cout << getal << std::endl;
 
     CHECK(h.operator()(p) != h.operator()(p1) );
+}
+
+TEST_CASE("Test Forward iterate")
+{
+    //create production
+    std::vector<char> v = {'A', 'C', '+'};
+    Production<char> p = Production<char> ('A', v);
+
+    //create production
+    std::vector<char> v1 = {'A', 'C', '-'};
+    Production<char> p1 = Production<char> ('B', v1);
+
+    std::unordered_set<Production<char>> unorderedSet;
+    unorderedSet.insert(p);
+    unorderedSet.insert(p1);
+
+    //Production<char> pReceive =  forwardIterate(unorderedSet.begin(), unorderedSet.end());
+    for (auto i = unorderedSet.begin(); i != unorderedSet.end(); i++) {
+        std::cout << static_cast<Production<char>>(*i).getPredecessor()  << std::endl;
+         //static_cast<Production<char>>(*i).getPredecessor();
+    }
+    //return Production<char>();
+
+    std::cout << "test" << std::endl;
+
+    //CHECK(h.operator()(p) != h.operator()(p1) );
 }

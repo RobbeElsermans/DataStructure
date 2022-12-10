@@ -10,9 +10,17 @@
 TEST_CASE("Check contructor"){
 
     //LSystemInterpreter define
-    const std::vector<char> axiom;
-    const std::unordered_set<Production<char>> productions;
-    const std::unordered_set<char> alphabet;
+    const std::vector<char> axiom{'A','B', 'B'};
+    const std::unordered_set<Production<char>> productions{
+        Production<char>{'A', {'A', 'X','A'}},
+        Production<char>{'B', {'B', 'X','B'}},
+        Production<char>{'C', {'+', 'X','+'}},
+    };
+    const std::unordered_set<char> alphabet{'A','B', 'C', 'D', 'E'};
+
+
 
     LSystemInterpreter<char> lSystemInterpreter = LSystemInterpreter<char>(axiom, productions, alphabet);
+
+
 }

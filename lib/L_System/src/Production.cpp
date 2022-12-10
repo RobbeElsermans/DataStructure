@@ -5,6 +5,11 @@
 #include "../include/Production.hpp"
 
 template<typename SymbolType>
+Production<SymbolType>::Production() {
+    //does nothing
+}
+
+template<typename SymbolType>
 Production<SymbolType>::Production(SymbolType predecessor, std::vector<SymbolType> successor) {
     Production::predecessor = predecessor;
     Production::successor = successor;

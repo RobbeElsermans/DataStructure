@@ -31,15 +31,14 @@ bool Production<char>::operator==(const Production<char> &production) const {
 template <typename IteratorType>
 Production<char> forwardIterate(IteratorType begin, IteratorType end)
 {
-    // TODO: Fill this in!
-
-    //pointers hun waarde zijn irrelevant
+    //geef elk object terug
     for (auto i = begin; i != end; i++) {
         std::cout << static_cast<Production<char>>(*i).getPredecessor()  << std::endl;
         return static_cast<Production<char>>(*i);
     }
+    return Production<char>();
 }
 
-template void forwardIterate(std::unordered_set<Production<char>>::iterator begin, std::unordered_set<Production<char>>::iterator end);
+template Production<char> forwardIterate(std::unordered_set<Production<char>>::iterator begin, std::unordered_set<Production<char>>::iterator end);
 
 //template void forwardIterate(std::unordered_set<Production<char>>::iterator begin, std::unordered_set<Production<char>>::iterator end);
