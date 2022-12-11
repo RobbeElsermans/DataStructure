@@ -45,8 +45,12 @@ std::vector<SymbolType> LSystemInterpreter<SymbolType>::generate(unsigned long i
 
     //definitely 1 iteration
     for (SymbolType symbol: this->axiom) {
+        //bool if no production is found
+        bool hasProduction = false;
         for (Production<SymbolType> p: this->productions) {
+
             if (p.getPredecessor() == symbol) {
+                hasProduction = true;
                 // If symbol found
                 // add to vector
                 for(SymbolType c :p.getSuccessor()){
@@ -56,7 +60,13 @@ std::vector<SymbolType> LSystemInterpreter<SymbolType>::generate(unsigned long i
                 //newAxiom.insert(std::end(newAxiom), std::begin(p.getSuccessor()), std::end(p.getSuccessor()));
 
             }
-            //if not continue loop
+
+        }
+
+        //if no production is found, add the value to it
+        if(!hasProduction)
+        {
+            newAxiom.push_back(symbol);
         }
     }
 
@@ -69,8 +79,11 @@ std::vector<SymbolType> LSystemInterpreter<SymbolType>::generate(unsigned long i
         newAxiom.clear();
 
         for (SymbolType symbol: temp_Axiom) {
+            //bool if no production is found
+            bool hasProduction = false;
             for (Production<SymbolType> p: this->productions) {
                 if (p.getPredecessor() == symbol) {
+                    hasProduction = true;
                     // If symbol found
                     // add to vector
                     for(SymbolType c :p.getSuccessor()){
@@ -79,6 +92,11 @@ std::vector<SymbolType> LSystemInterpreter<SymbolType>::generate(unsigned long i
                     //newAxiom.insert(newAxiom.end(), p.getSuccessor().begin(), p.getSuccessor().end());
                 }
                 //if not continue loop
+            }
+            //if no production is found, add the value to it
+            if(!hasProduction)
+            {
+                newAxiom.push_back(symbol);
             }
         }
     }

@@ -94,6 +94,38 @@ build liblSystemLib.a: CXX_STATIC_LIBRARY_LINKER__lSystemLib_Debug CMakeFiles/lS
   TARGET_PDB = lSystemLib.a.dbg
 
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target TurtleLib
+
+
+#############################################
+# Order-only phony target for TurtleLib
+
+build cmake_object_order_depends_target_TurtleLib: phony || CMakeFiles/TurtleLib.dir
+
+build CMakeFiles/TurtleLib.dir/lib/Turtle/src/Turtle.cpp.o: CXX_COMPILER__TurtleLib_Debug /home/robbe/Documents/GitHub/DataStructure/lib/Turtle/src/Turtle.cpp || cmake_object_order_depends_target_TurtleLib
+  DEP_FILE = CMakeFiles/TurtleLib.dir/lib/Turtle/src/Turtle.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/TurtleLib.dir
+  OBJECT_FILE_DIR = CMakeFiles/TurtleLib.dir/lib/Turtle/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target TurtleLib
+
+
+#############################################
+# Link the static library libTurtleLib.a
+
+build libTurtleLib.a: CXX_STATIC_LIBRARY_LINKER__TurtleLib_Debug CMakeFiles/TurtleLib.dir/lib/Turtle/src/Turtle.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/TurtleLib.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libTurtleLib.a
+  TARGET_PDB = TurtleLib.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target main
 
 
@@ -105,37 +137,44 @@ build cmake_object_order_depends_target_main: phony || cmake_object_order_depend
 build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/src/main.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/src/main.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include -I/home/robbe/Documents/GitHub/DataStructure/lib
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
 
 build CMakeFiles/main.dir/lib/L_System/src/Production.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Production.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/lib/L_System/src/Production.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include -I/home/robbe/Documents/GitHub/DataStructure/lib
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/L_System/src
 
 build CMakeFiles/main.dir/lib/L_System/src/Validation.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/Validation.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/lib/L_System/src/Validation.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include -I/home/robbe/Documents/GitHub/DataStructure/lib
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/L_System/src
 
 build CMakeFiles/main.dir/lib/L_System/src/LSystemInterpreter.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/LSystemInterpreter.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/lib/L_System/src/LSystemInterpreter.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include -I/home/robbe/Documents/GitHub/DataStructure/lib
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/L_System/src
 
 build CMakeFiles/main.dir/lib/L_System/src/HelpFunctions.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/L_System/src/HelpFunctions.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/lib/L_System/src/HelpFunctions.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include -I/home/robbe/Documents/GitHub/DataStructure/lib
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/L_System/src
+
+build CMakeFiles/main.dir/lib/Turtle/src/Turtle.cpp.o: CXX_COMPILER__main_Debug /home/robbe/Documents/GitHub/DataStructure/lib/Turtle/src/Turtle.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/lib/Turtle/src/Turtle.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include -I/home/robbe/Documents/GitHub/DataStructure/lib
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/lib/Turtle/src
 
 
 # =============================================================================
@@ -145,7 +184,7 @@ build CMakeFiles/main.dir/lib/L_System/src/HelpFunctions.cpp.o: CXX_COMPILER__ma
 #############################################
 # Link the executable main
 
-build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/lib/L_System/src/Production.cpp.o CMakeFiles/main.dir/lib/L_System/src/Validation.cpp.o CMakeFiles/main.dir/lib/L_System/src/LSystemInterpreter.cpp.o CMakeFiles/main.dir/lib/L_System/src/HelpFunctions.cpp.o | liblSystemLib.a || liblSystemLib.a
+build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/lib/L_System/src/Production.cpp.o CMakeFiles/main.dir/lib/L_System/src/Validation.cpp.o CMakeFiles/main.dir/lib/L_System/src/LSystemInterpreter.cpp.o CMakeFiles/main.dir/lib/L_System/src/HelpFunctions.cpp.o CMakeFiles/main.dir/lib/Turtle/src/Turtle.cpp.o | liblSystemLib.a || liblSystemLib.a
   FLAGS = -g
   LINK_LIBRARIES = liblSystemLib.a
   OBJECT_DIR = CMakeFiles/main.dir
@@ -198,6 +237,13 @@ build CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o: CXX_COM
   OBJECT_DIR = CMakeFiles/TestSuite.dir
   OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/L_System
 
+build CMakeFiles/TestSuite.dir/lib/Turtle/src/Turtle.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/lib/Turtle/src/Turtle.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/lib/Turtle/src/Turtle.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
+  OBJECT_DIR = CMakeFiles/TestSuite.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/lib/Turtle/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TestSuite
@@ -206,7 +252,7 @@ build CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o: CXX_COM
 #############################################
 # Link the executable TestSuite
 
-build TestSuite: CXX_EXECUTABLE_LINKER__TestSuite_Debug CMakeFiles/TestSuite.dir/test/main.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_Production.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_Validation.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_HelpFunctions.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o | liblSystemLib.a || liblSystemLib.a
+build TestSuite: CXX_EXECUTABLE_LINKER__TestSuite_Debug CMakeFiles/TestSuite.dir/test/main.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_Production.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_Validation.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_HelpFunctions.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o CMakeFiles/TestSuite.dir/lib/Turtle/src/Turtle.cpp.o | liblSystemLib.a || liblSystemLib.a
   FLAGS = -g
   LINK_LIBRARIES = liblSystemLib.a
   OBJECT_DIR = CMakeFiles/TestSuite.dir
@@ -242,6 +288,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build TurtleLib: phony libTurtleLib.a
+
 build lSystemLib: phony liblSystemLib.a
 
 # =============================================================================
@@ -252,7 +300,7 @@ build lSystemLib: phony liblSystemLib.a
 #############################################
 # Folder: /home/robbe/Documents/GitHub/DataStructure/cmake-build-debug
 
-build all: phony liblSystemLib.a main TestSuite
+build all: phony liblSystemLib.a libTurtleLib.a main TestSuite
 
 # =============================================================================
 # Built-in targets

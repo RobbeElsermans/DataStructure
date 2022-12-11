@@ -8,6 +8,8 @@
 #include <vector>
 #include <unordered_set>
 #include "Production.hpp"
+#include "Validation.hpp"
+#include "HelpFunctions.hpp"
 
 // This class represents the actual L-System.
 // It contains an axiom (Initial state), A set of productions
