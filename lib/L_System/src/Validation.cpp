@@ -10,28 +10,33 @@
 template<typename SymbolType>
 bool isValidProduction(const Production<SymbolType> &production, const std::unordered_set<SymbolType> &alphabet) {
     //check if all values are in the alphabet
-
     Production<SymbolType> p = production;
 
     //reference: https://stackoverflow.com/questions/1701067/how-to-check-that-an-element-is-in-a-stdset
-    const bool isInPredecessor = alphabet.find(p.getPredecessor()) != alphabet.end();
 
-    /*
-    bool isInSuccessor = false;
-    for (SymbolType value: p.getSuccessor()) {
-        if (alphabet.find(value) != alphabet.end()) {
-            isInSuccessor = true;
-        }
-        else{
-            //Als er 1 fout in zit, stoppen want ze moeten allen in het alphabet voorkomen.
-            isInSuccessor = false;
-            break;
+    //Check that predecessor is in alphabet
+    if(alphabet.find(p.getPredecessor()) == alphabet.end()){
+        throw std::invalid_argument("Not all items are in alphabet!");
+    }
+
+    //Check that successor is in alphabet
+    bool isInSuccessor;
+    for(SymbolType a : p.getSuccessor()){
+        if(alphabet.find(a) == alphabet.end()){
+            // If there is a symbol in the alphabet without a production,
+            // you can decide what to do:
+            //
+            //    1. Throw an exception
+            throw std::invalid_argument("Not all items are in alphabet!");
+            //    2. Add an identity production (A -> A)
+            //TODO probeer dit ook eens
+            //return false;
         }
     }
-     */
 
-    return isInPredecessor; //&& isInSuccessor;
+    return true;
 }
+
 
 template <typename SymbolType>
 bool isUniqueProductionSet(const std::unordered_set<Production<SymbolType>>& production){
@@ -39,15 +44,27 @@ bool isUniqueProductionSet(const std::unordered_set<Production<SymbolType>>& pro
     std::unordered_set<Production<SymbolType>> p = production;
     size_t counter = 0;
 
+    //check the predecessors
+    for(Production<SymbolType> value : p){
+        counter = 0;
+
+        for(Production<SymbolType> value2 : p){
+            if(value.getPredecessor() == value2.getPredecessor())
+            {
+                ++counter;
+            }
+            if(counter > 1)
+                return false;
+        }
+    }
+
+    //check the successors
     for(Production<SymbolType> value : p){
         counter = 0;
         for(Production<SymbolType> value2 : p){
             if(value.getSuccessor() == value2.getSuccessor())
             {
                 ++counter;
-                //std::cout << value.getSuccessor().back() << std::endl;
-                //std::cout << value2.getSuccessor().back() << std::endl;
-                //std::cout << std::endl;
             }
             if(counter > 1)
                 return false;

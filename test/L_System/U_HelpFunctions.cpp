@@ -19,7 +19,7 @@ TEST_CASE("Validating equality Vector"){
     CHECK(v != v2);
 }
 
-TEST_CASE("Test randomness hashFunction")
+TEST_CASE("Test randomness hashFunction with disunique sets")
 {
     //create production
     std::vector<char> v = {'A', 'C', '+'};
@@ -35,6 +35,24 @@ TEST_CASE("Test randomness hashFunction")
     //std::cout << getal << std::endl;
 
     CHECK(h.operator()(p) != h.operator()(p1) );
+}
+
+TEST_CASE("Test randomness hashFunction with unique sets")
+{
+    //create production
+    std::vector<char> v = {'A', 'C', '-'};
+    Production<char> p = Production<char> ('A', v);
+
+    //create production
+    std::vector<char> v1 = {'A', 'C', '-'};
+    Production<char> p1 = Production<char> ('A', v1);
+
+    //maak hash functie aan
+    std::hash<Production<char>> h;
+    //size_t getal = h.operator()(p);
+    //std::cout << getal << std::endl;
+
+    CHECK(h.operator()(p) == h.operator()(p1) );
 }
 
 TEST_CASE("Test Forward iterate")
