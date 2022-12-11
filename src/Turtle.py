@@ -4,7 +4,7 @@ import turtle
 import fileinput
 
 turtle.speed("fastest")
-text = fileinput.input("../output/test1670759286.txt").readline();
+text = fileinput.input("../output/test1670786310.txt").readline();
 
 print(text)
 
@@ -20,10 +20,10 @@ for item in text:
 
     if item == '+':
         #print("go 90° right")
-        turtle.right(90)
+        turtle.right(100)
 
     if item == '-':
         #print("go 90° left")
-        turtle.left(90)
+        turtle.left(38)
 
 turtle.done()

@@ -16,12 +16,6 @@ add_library(lSystemLib STATIC
 
 target_include_directories(lSystemLib PUBLIC "include/")
 
-add_library(TurtleLib STATIC
-        lib/Turtle/src/Turtle.cpp
-        lib/Turtle/include/Turtle.h)
-
-target_include_directories(TurtleLib PUBLIC "include/")
-
 add_executable(main
         "src/main.cpp"
         lib/L_System/src/Production.cpp
@@ -31,7 +25,7 @@ add_executable(main
         lib/L_System/src/LSystemInterpreter.cpp
         lib/L_System/include/LSystemInterpreter.hpp
         lib/L_System/src/HelpFunctions.cpp
-        lib/L_System/include/HelpFunctions.hpp lib/Turtle/src/Turtle.cpp lib/Turtle/include/Turtle.h)
+        lib/L_System/include/HelpFunctions.hpp)
 
 target_include_directories(main PUBLIC
         "include/"
@@ -43,7 +37,7 @@ add_executable(TestSuite
         test/L_System/U_Production.cpp
         test/L_System/U_Validation.cpp
         test/L_System/U_HelpFunctions.cpp
-        test/L_System/U_LSystemInterpreter.cpp lib/Turtle/src/Turtle.cpp lib/Turtle/include/Turtle.h)
+        test/L_System/U_LSystemInterpreter.cpp)
 
 target_include_directories(TestSuite PUBLIC
         "include/"

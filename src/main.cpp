@@ -8,16 +8,15 @@ int main() {
     //std::cout << "Hello, World!" << std::endl;
 
     //https://ibeach.github.io/turtle/
-    const std::vector<char> axiom{'F', 'X'};
+    const std::vector<char> axiom{'F','-','F','-','F','-','F'};
     const std::unordered_set<Production<char>> productions{
-            Production<char>{'X', {'X', '+', 'Y', 'F', '+'}},
-            Production<char>{'Y', {'-', 'F', 'X', '-', 'Y'}},
+            Production<char>{'F', {'F', '+', 'F', 'F', '-'}}
+            //Production<char>{'Y', {'-', 'F', 'X', '-', 'Y'}},
     };
 
     const std::unordered_set<char> alphabet{'X','Y','F','+','-'};
 
     //Drawing
-
     // F    means go forward by 20 px
     // -    means go left by 90°
     // +    means go right by 90°
