@@ -27,6 +27,7 @@ def draw(text, forward, left, right):
 
     turtle.done()
 
+
 def main():
     turtle.speed(0)  # het snelste
     turtle_screen = turtle.Screen()
