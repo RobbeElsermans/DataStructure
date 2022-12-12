@@ -71,6 +71,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/lib"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
@@ -94,6 +95,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/include"/>
+					<Add directory="/home/robbeelsermans/Documents/gitHub/DataStructure/lib"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
