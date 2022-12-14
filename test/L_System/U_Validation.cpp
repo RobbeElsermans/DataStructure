@@ -19,7 +19,7 @@ TEST_CASE("Test simple Validation True"){
     us.insert('C');
     us.insert('+');
 
-    CHECK(isValidProduction<char>(p, us) == true);
+    CHECK(isValidProduction<char>(p, us));
 }
 
 TEST_CASE("Test simple Validation False successors"){
@@ -33,7 +33,7 @@ TEST_CASE("Test simple Validation False successors"){
     us.insert('A');
     us.insert('C');
 
-    CHECK_THROWS(isValidProduction<char>(p, us));
+    CHECK_FALSE(isValidProduction<char>(p, us));
 }
 
 TEST_CASE("Test simple Validation False predecessor"){
@@ -48,7 +48,7 @@ TEST_CASE("Test simple Validation False predecessor"){
     us.insert('C');
     us.insert('+');
 
-    CHECK_THROWS(isValidProduction<char>(p, us));
+    CHECK_FALSE(isValidProduction<char>(p, us));
 }
 
 TEST_CASE("Validating Unique successor"){
@@ -137,4 +137,70 @@ TEST_CASE("Validating disUnique predecessor"){
     //std::cout << b << std::endl;
 
     CHECK(b == false);
+}
+
+TEST_CASE("Test isInAlphabet 0 added"){
+
+    //create production
+    std::vector<char> v = {'A', 'C', '+'};
+    Production<char> p = Production<char> ('A', v);
+    std::unordered_set<Production<char>> productions = {p};
+
+    //create alphabet
+    std::unordered_set<char> alphabet = {'A'};
+
+    std::unordered_set<Production<char>> recieveProductions = isInAlphabet(productions,alphabet);
+
+    CHECK(recieveProductions.size() == productions.size());
+}
+
+TEST_CASE("Test isInAlphabet 1 added"){
+
+    //create production
+    std::vector<char> v = {'A', 'C', '+'};
+    Production<char> p = Production<char> ('A', v);
+    std::unordered_set<Production<char>> productions = {p};
+    Production<char> addedP = Production<char> ('b', std::vector<char>{'B'});
+
+    //create alphabet
+    std::unordered_set<char> alphabet = {'A', 'B'};
+
+    std::unordered_set<Production<char>> recieveProductions = isInAlphabet(productions,alphabet);
+
+    CHECK(recieveProductions.size() == productions.size()+1);
+    for(Production<char> prod : recieveProductions){
+        if(prod.getPredecessor() == addedP.getPredecessor() && prod.getSuccessor() == addedP.getSuccessor())
+            CHECK(true);
+    }
+}
+
+TEST_CASE("Test isInAlphabet 2 added"){
+
+    //create production
+    std::vector<char> v = {'A', 'C', '+'};
+    Production<char> p = Production<char> ('A', v);
+    std::unordered_set<Production<char>> productions = {p};
+    Production<char> addedP1 = Production<char> ('B', std::vector<char>{'B'});
+    Production<char> addedP2 = Production<char> ('C', std::vector<char>{'C'});
+
+    //create alphabet
+    std::unordered_set<char> alphabet = {'A', 'B', 'C'};
+
+    std::unordered_set<Production<char>> recieveProductions = isInAlphabet(productions,alphabet);
+
+    CHECK(recieveProductions.size() == productions.size()+2);
+    if(recieveProductions.find(addedP1) != recieveProductions.end()){
+        //std::printf("test1");
+        CHECK(true);
+    }
+    else{
+        CHECK(false);
+    }
+    if(recieveProductions.find(addedP2) != recieveProductions.end()){
+        //std::printf("test2");
+        CHECK(true);
+    }
+    else{
+        CHECK(false);
+    }
 }

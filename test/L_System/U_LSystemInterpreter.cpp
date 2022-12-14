@@ -21,6 +21,20 @@ TEST_CASE("Check constructor when valid"){
     CHECK_NOTHROW(LSystemInterpreter<char>(axiom, productions, alphabet));
 }
 
+TEST_CASE("Check constructor when not enough Productions"){
+
+    //LSystemInterpreter define
+    const std::vector<char> axiom{'A','B', 'B'};
+    const std::unordered_set<Production<char>> productions{
+            Production<char>{'A', {'A', 'X','A'}},
+            Production<char>{'B', {'B', 'X','B'}},
+            Production<char>{'C', {'+', 'X','+'}},
+    };
+    const std::unordered_set<char> alphabet{'A','B', 'C', 'D', 'X', '+'};
+
+    CHECK_NOTHROW(LSystemInterpreter<char>(axiom, productions, alphabet));
+}
+
 //TODO check ook ofdat axiom in alphabet zit?
 TEST_CASE("Check constructor when invalid axiom"){
 

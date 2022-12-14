@@ -32,7 +32,7 @@ def main():
     turtle.speed(0)  # het snelste
     turtle_screen = turtle.Screen()
     turtle_screen.screensize(2000, 2000)
-    text = fileinput.input("../output/testTree1670862632.txt").readline()
+    text = fileinput.input("../output/testTree1671062098.txt").readline()
 
     turtle.left(90)
 

@@ -32,6 +32,12 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const std::vector<SymbolType>
     if (!isUniqueProductionSet(productions)) {
         throw std::invalid_argument("productions successors and predecessor must be unique!");
     }
+
+    // It should also check that there is a Production for
+    // each symbol in the alphabet.
+    // If there is a symbol in the alphabet without a production, add a production with that symbol
+    this->productions = isInAlphabet(productions, alphabet);
+    std::printf("test");
 }
 
 template<typename SymbolType>

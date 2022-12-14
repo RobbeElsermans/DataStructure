@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 #include "../include/Validation.hpp"
 #include "../include/HelpFunctions.hpp"
 
@@ -15,22 +16,21 @@ bool isValidProduction(const Production<SymbolType> &production, const std::unor
     //reference: https://stackoverflow.com/questions/1701067/how-to-check-that-an-element-is-in-a-stdset
 
     //Check that predecessor is in alphabet
-    if(alphabet.find(p.getPredecessor()) == alphabet.end()){
-        throw std::invalid_argument("Not all items are in alphabet!");
-    }
+    if(alphabet.find(p.getPredecessor()) == alphabet.end())
+        return false;
 
-    //Check that successor is in alphabet
-    bool isInSuccessor;
+    //check if successors is in production
     for(SymbolType a : p.getSuccessor()){
         if(alphabet.find(a) == alphabet.end()){
             // If there is a symbol in the alphabet without a production,
             // you can decide what to do:
             //
             //    1. Throw an exception
-            throw std::invalid_argument("Not all items are in alphabet!");
+            //throw std::invalid_argument("Not all items are in alphabet!");
             //    2. Add an identity production (A -> A)
+
             //TODO probeer dit ook eens
-            //return false;
+            return false;
         }
     }
 
@@ -74,6 +74,29 @@ bool isUniqueProductionSet(const std::unordered_set<Production<SymbolType>>& pro
     return true;
 }
 
+template <typename SymbolType>
+std::unordered_set<Production<SymbolType>> isInAlphabet(const std::unordered_set<Production<SymbolType>>& productions, const std::unordered_set<SymbolType>& alphabet){
+    std::unordered_set<Production<SymbolType>> temp_p = productions;
+
+    for(SymbolType a: alphabet){
+        //iterate over the productions
+        bool isInside = false;
+        for(Production<SymbolType> p : productions){
+            if(p.getPredecessor() == a){
+                isInside = true;
+            }
+        }
+
+        if(!isInside)
+        {
+            //there is no production found so add one
+            temp_p.insert(Production<SymbolType>(a, std::vector<SymbolType>{a}));
+        }
+    }
+    return temp_p;
+}
+
 //Explicit declaration
 template bool isValidProduction(const Production<char> &production, const std::unordered_set<char> &alphabet);
 template bool isUniqueProductionSet(const std::unordered_set<Production<char>>& production);
+template std::unordered_set<Production<char>> isInAlphabet(const std::unordered_set<Production<char>>& productions, const std::unordered_set<char>& alphabet);

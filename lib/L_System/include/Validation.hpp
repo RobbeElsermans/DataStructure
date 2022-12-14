@@ -29,4 +29,13 @@ bool isValidProduction(const Production<SymbolType>& production, const std::unor
 template <typename SymbolType>
 bool isUniqueProductionSet(const std::unordered_set<Production<SymbolType>>& production);
 
+/**
+ * @description This function checks if each symbol in the alphabet has 1 production
+ * @tparam SymbolType
+ * @param production
+ * @param alphabet
+ * @return returns a new set of productions
+ */
+template <typename SymbolType>
+std::unordered_set<Production<SymbolType>> isInAlphabet(const std::unordered_set<Production<SymbolType>>& productions, const std::unordered_set<SymbolType>& alphabet);
 #endif //DATASTRUCTURE_VALIDATION_HPP
