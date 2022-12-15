@@ -21,24 +21,7 @@ namespace std{
     }
 }
 
-//template<typename SymbolType>
 template<>
 bool Production<char>::operator==(const Production<char> &production) const {
     return this->predecessor == production.predecessor;
 }
-
-//iterator
-template <typename IteratorType>
-Production<char> forwardIterate(IteratorType begin, IteratorType end)
-{
-    //geef elk object terug
-    for (auto i = begin; i != end; i++) {
-        std::cout << static_cast<Production<char>>(*i).getPredecessor()  << std::endl;
-        return static_cast<Production<char>>(*i);
-    }
-    return Production<char>();
-}
-
-template Production<char> forwardIterate(std::unordered_set<Production<char>>::iterator begin, std::unordered_set<Production<char>>::iterator end);
-
-//template void forwardIterate(std::unordered_set<Production<char>>::iterator begin, std::unordered_set<Production<char>>::iterator end);

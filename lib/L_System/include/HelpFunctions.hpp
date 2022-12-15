@@ -15,8 +15,4 @@ namespace std {
 };
 }
 
-////iterator
-//template <typename IteratorType>
-//Production<char> forwardIterate(IteratorType begin, IteratorType end);
-
 #endif //DATASTRUCTURE_HELPFUNCTIONS_HPP
