@@ -32,7 +32,7 @@ def main():
     turtle.speed(0)  # het snelste
     turtle_screen = turtle.Screen()
     turtle_screen.screensize(2000, 2000)
-    text = fileinput.input("../output/testTree1671062098.txt").readline()
+    text = fileinput.input("../output/testSnowWindow1670862288.txt").readline()
 
     turtle.left(90)
 
@@ -43,7 +43,7 @@ def main():
     # 3 -> dragon
     # 4 -> snow
     # 5 -> tree
-    typen = 5
+    typen = 4
 
     if typen == 0:
         draw(text, 15, 80, 80)
