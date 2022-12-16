@@ -37,7 +37,7 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const std::vector<SymbolType>
     // each symbol in the alphabet.
     // If there is a symbol in the alphabet without a production, add a production with that symbol
     this->productions = isInAlphabet(productions, alphabet);
-    std::printf("test");
+    //std::printf("test");
 }
 
 template<typename SymbolType>

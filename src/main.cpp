@@ -5,12 +5,12 @@
 #include "../lib/L_System/include/LSystemInterpreter.hpp"
 
 typedef enum Type{
-    triangle,
-    plant,
-    dragon,
-    hilbert,
-    snowWindow,
-    tree,
+    triangle = 1,
+    plant = 2,
+    dragon = 3,
+    hilbert = 4,
+    snowWindow = 5,
+    tree = 6,
 };
 
 void createTriangle();
@@ -25,7 +25,21 @@ void createTree();
 
 int main() {
     //std::cout << "Hello, World!" << std::endl;
-    Type type = tree;
+    Type type;// = tree;
+
+    std::cout << "Give a number accordingly of the list:" << std::endl;
+    std::cout << "1: triangle"<< std::endl;
+    std::cout << "2: plant"<< std::endl;
+    std::cout << "3: dragon"<< std::endl;
+    std::cout << "4: hilbert"<< std::endl;
+    std::cout << "5: snowWindow"<< std::endl;
+    std::cout << "6: tree"<< std::endl<< std::endl;
+    char input;
+    std::cout << "number: ";
+    std::cin >> input;
+
+    //source: https://stackoverflow.com/questions/5029840/convert-char-to-int-in-c-and-c
+    type = (Type)(input - '0');
 
     switch (type) {
         case triangle:
@@ -33,6 +47,9 @@ int main() {
             break;
         case plant:
             createPlant();
+            break;
+        case dragon:
+            createDragon();
             break;
         case hilbert:
             createHilbert();
@@ -112,6 +129,21 @@ void createHilbert(){
     CreateFile(getValue, "Hilbert");
 }
 
+void createDragon(){
+    //https://en.wikipedia.org/wiki/L-system
+    const std::vector<char> axiom{'F'};
+    const std::unordered_set<Production<char>> productions{
+            Production<char>{'F', {'F','+','G'}},
+            Production<char>{'G', {'F','-','G'}}
+    };
+
+    const std::unordered_set<char> alphabet{'F','G','+','-'};
+
+    std::vector<char> getValue = LSystemInterpreter<char>(axiom, productions, alphabet).generate(10);
+
+    CreateFile(getValue, "Dragon");
+}
+
 void createSnowWindow(){
     //https://ibeach.github.io/turtle/
     const std::vector<char> axiom{'F','-','F','-','F', '-', 'F'};
@@ -127,10 +159,15 @@ void createSnowWindow(){
 }
 
 void CreateFile(std::vector<char> &getValue, const std::string& fileExtention) {//output getValue to file with timestamp
-    std::ofstream saveFile("../output/test"+fileExtention + std::to_string(time(0)) + ".txt", std::ios::out);
+    std::string extention = fileExtention + std::to_string(time(0)) + ".txt";
+    std::string outputFile = "../output/";
+    std::ofstream saveFile(outputFile+extention, std::ios::out);
 
     for(char c : getValue)
         saveFile << c;
 
+    std::cout << "file has been saved under \" "+ outputFile + "\" with name: "+ extention << std::endl;
+    std::cout << "-->  "+ outputFile + extention << std::endl;
+    std::cout << "Fill this path inside the Turtle.py file!" << std::endl;
     saveFile.close();
 }
