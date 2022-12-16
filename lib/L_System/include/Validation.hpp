@@ -47,5 +47,5 @@ std::unordered_set<Production<SymbolType>> isInAlphabet(const std::unordered_set
  * @return returns a new set of productions
  */
 template <typename SymbolType>
-std::unordered_set<Production<SymbolType>> isInAxiom(const std::unordered_set<Production<SymbolType>>& productions, const std::unordered_set<SymbolType>& alphabet);
+bool isValidAxiom(const std::vector<SymbolType>& axiom, const std::unordered_set<SymbolType>& alphabet);
 #endif //DATASTRUCTURE_VALIDATION_HPP

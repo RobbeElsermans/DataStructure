@@ -96,15 +96,15 @@ void createTree() {
 
 void createTriangle(){
     //https://ibeach.github.io/turtle/
-    const std::vector<char> axiom{'L'};
+    const std::vector<char> axiom{'A'};
     const std::unordered_set<Production<char>> productions{
-            Production<char>{'L', {'[','R', '-', 'L', '-', 'R',']'}},
-            Production<char>{'R', {'L', '+', 'R', '+', 'L'}},
+            Production<char>{'A', {'B','-','A','-','B'}},
+            Production<char>{'B', {'A','+','B','+','A'}},
     };
 
-    const std::unordered_set<char> alphabet{'R','L','+','-','[',']'};
+    const std::unordered_set<char> alphabet{'A','B','+','-'};
 
-    std::vector<char> getValue = LSystemInterpreter<char>(axiom, productions, alphabet).generate(10);
+    std::vector<char> getValue = LSystemInterpreter<char>(axiom, productions, alphabet).generate(6);
 
     CreateFile(getValue, "Triangle");
 }
@@ -167,7 +167,7 @@ void createSnowWindow(){
 
     const std::unordered_set<char> alphabet{'A','B','F','-','+'};
 
-    std::vector<char> getValue = LSystemInterpreter<char>(axiom, productions, alphabet).generate(4);
+    std::vector<char> getValue = LSystemInterpreter<char>(axiom, productions, alphabet).generate(5);
 
     CreateFile(getValue, "SnowWindow");
 }

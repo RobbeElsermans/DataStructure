@@ -22,14 +22,6 @@ bool isValidProduction(const Production<SymbolType> &production, const std::unor
     //check if successors is in production
     for(SymbolType a : p.getSuccessor()){
         if(alphabet.find(a) == alphabet.end()){
-            // If there is a symbol in the alphabet without a production,
-            // you can decide what to do:
-            //
-            //    1. Throw an exception
-            //throw std::invalid_argument("Not all items are in alphabet!");
-            //    2. Add an identity production (A -> A)
-
-            //TODO probeer dit ook eens
             return false;
         }
     }
@@ -96,12 +88,29 @@ std::unordered_set<Production<SymbolType>> isInAlphabet(const std::unordered_set
     return temp_p;
 }
 
+template <typename SymbolType>
+bool isValidAxiom(const std::vector<SymbolType>& axiom, const std::unordered_set<SymbolType>& alphabet){
+    //check if all values are in the alphabet
+    std::vector<SymbolType> a = axiom;
+
+    //check if axioms is in production
+    for(SymbolType item : a){
+        if(alphabet.find(item) == alphabet.end()){
+            return false;
+        }
+    }
+
+    return true;
+}
+
 //Explicit declaration char
 template bool isValidProduction(const Production<char> &production, const std::unordered_set<char> &alphabet);
 template bool isUniqueProductionSet(const std::unordered_set<Production<char>>& production);
 template std::unordered_set<Production<char>> isInAlphabet(const std::unordered_set<Production<char>>& productions, const std::unordered_set<char>& alphabet);
+template bool isValidAxiom(const std::vector<char>& axiom, const std::unordered_set<char>& alphabet);
 
 //Explicit declaration int8_t
 template bool isValidProduction(const Production<int8_t> &production, const std::unordered_set<int8_t> &alphabet);
 template bool isUniqueProductionSet(const std::unordered_set<Production<int8_t>>& production);
 template std::unordered_set<Production<int8_t>> isInAlphabet(const std::unordered_set<Production<int8_t>>& productions, const std::unordered_set<int8_t>& alphabet);
+template bool isValidAxiom(const std::vector<int8_t>& axiom, const std::unordered_set<int8_t>& alphabet);

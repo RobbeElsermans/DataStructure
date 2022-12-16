@@ -35,6 +35,12 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const std::vector<SymbolType>
         throw std::invalid_argument("productions successors and predecessor must be unique!");
     }
 
+    // The constructor should also check that
+    // every axiom item is in the alphabet.
+    if (!isValidAxiom(axiom, alphabet)) {
+        throw std::invalid_argument("Axiom is not valid!");
+    }
+
     // It should also check that there is a Production for
     // each symbol in the alphabet.
     // If there is a symbol in the alphabet without a production, add a production with that symbol

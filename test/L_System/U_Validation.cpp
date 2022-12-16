@@ -204,3 +204,25 @@ TEST_CASE("Test isInAlphabet 2 added"){
         CHECK(false);
     }
 }
+
+TEST_CASE("Validating good axiom"){
+    //create axiom
+    std::vector<char> axiom = {'A', 'C', '+'};
+    std::unordered_set<char> alphabet = {'A', 'C', '+'};
+
+    bool b = isValidAxiom(axiom, alphabet);
+    //std::cout << b << std::endl;
+
+    CHECK(b == true);
+}
+
+TEST_CASE("Validating bad axiom"){
+    //create axiom
+    std::vector<char> axiom = {'A', 'X', '+'};
+    std::unordered_set<char> alphabet = {'A', 'C', '+'};
+
+    bool b = isValidAxiom(axiom, alphabet);
+    //std::cout << b << std::endl;
+
+    CHECK(b == false);
+}
