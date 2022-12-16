@@ -19,10 +19,12 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const std::vector<SymbolType>
     this->productions = productions;
     this->axiom = axiom;
 
+    //TODO check axiom that all items are in alphabet
+
     // It should check that all productions are valid
     // the “isValidProduction” function above.
     for (auto i = this->productions.begin(); i != this->productions.end(); ++i) {
-        if (!isValidProduction(static_cast<Production<char>>(*i), this->alphabet)) {
+        if (!isValidProduction(static_cast<Production<SymbolType>>(*i), this->alphabet)) {
             throw std::invalid_argument("productions must be valid on the alphabet");
         }
     }
@@ -111,3 +113,6 @@ std::vector<SymbolType> LSystemInterpreter<SymbolType>::generate(unsigned long i
 
 template
 class LSystemInterpreter<char>;
+
+template
+class LSystemInterpreter<int8_t>;

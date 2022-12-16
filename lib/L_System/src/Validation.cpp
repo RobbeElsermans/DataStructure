@@ -96,7 +96,12 @@ std::unordered_set<Production<SymbolType>> isInAlphabet(const std::unordered_set
     return temp_p;
 }
 
-//Explicit declaration
+//Explicit declaration char
 template bool isValidProduction(const Production<char> &production, const std::unordered_set<char> &alphabet);
 template bool isUniqueProductionSet(const std::unordered_set<Production<char>>& production);
 template std::unordered_set<Production<char>> isInAlphabet(const std::unordered_set<Production<char>>& productions, const std::unordered_set<char>& alphabet);
+
+//Explicit declaration int8_t
+template bool isValidProduction(const Production<int8_t> &production, const std::unordered_set<int8_t> &alphabet);
+template bool isUniqueProductionSet(const std::unordered_set<Production<int8_t>>& production);
+template std::unordered_set<Production<int8_t>> isInAlphabet(const std::unordered_set<Production<int8_t>>& productions, const std::unordered_set<int8_t>& alphabet);

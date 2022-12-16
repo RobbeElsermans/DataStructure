@@ -38,4 +38,14 @@ bool isUniqueProductionSet(const std::unordered_set<Production<SymbolType>>& pro
  */
 template <typename SymbolType>
 std::unordered_set<Production<SymbolType>> isInAlphabet(const std::unordered_set<Production<SymbolType>>& productions, const std::unordered_set<SymbolType>& alphabet);
+
+/**
+ * @description This function checks if each symbol in the axiom is in the alphabet
+ * @tparam SymbolType
+ * @param production
+ * @param alphabet
+ * @return returns a new set of productions
+ */
+template <typename SymbolType>
+std::unordered_set<Production<SymbolType>> isInAxiom(const std::unordered_set<Production<SymbolType>>& productions, const std::unordered_set<SymbolType>& alphabet);
 #endif //DATASTRUCTURE_VALIDATION_HPP

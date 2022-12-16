@@ -26,4 +26,5 @@ std::vector<SymbolType> Production<SymbolType>::getSuccessor() {
 }
 
 template class Production<char>;
-//template std::vector<char> Production<char>::getSuccessor();
+
+template class Production<int8_t>;

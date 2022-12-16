@@ -28,12 +28,35 @@ def draw(text, forward, left, right):
     turtle.done()
 
 
+def drawInteger(text, forward, left, right):
+    stack = []
+    for command in text:
+        turtle.pd()
+        if command in ["1"]:
+            turtle.forward(forward)
+        elif command == "0":
+            turtle.pu()  # pen up - not drawing
+            turtle.forward(forward)
+        elif command == "2":
+            turtle.right(right)
+        elif command == "3":
+            turtle.left(left)
+        elif command == "[":
+            stack.append((turtle.position(), turtle.heading()))
+        elif command == "]":
+            turtle.pu()  # pen up - not drawing
+            position, heading = stack.pop()
+            turtle.goto(position)
+            turtle.setheading(heading)
+
+    turtle.done()
+
+
 def main():
     turtle.speed(0)  # het snelste
     turtle_screen = turtle.Screen()
     turtle_screen.screensize(2000, 2000)
-    text = fileinput.input("../output/Dragon1671179701.txt").readline()
-
+    text = fileinput.input("../output/Weirdness1671182782.txt").readline()
     turtle.left(90)
 
     print(text)
@@ -43,7 +66,9 @@ def main():
     # 3 -> dragon
     # 4 -> snow
     # 5 -> tree
-    typen = 3
+    # 6 -> numberLines
+    # 7 -> weirdness
+    typen = 7
 
     if typen == 0:
         draw(text, 15, 80, 80)
@@ -57,6 +82,10 @@ def main():
         draw(text, 5, 90, 90)
     elif typen == 5:
         draw(text, 5, 22.5, 22.5)
+    elif typen == 6:
+        drawInteger(text, 5, 90, 90)
+    elif typen == 7:
+        draw(text, 2, 90, 90)
 
 
 if __name__ == "__main__":
