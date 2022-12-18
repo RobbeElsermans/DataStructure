@@ -13,25 +13,24 @@ typedef enum Type{
     tree = 6,
     numberLines = 7,
     weirdness = 8
-};
+}Type;
 
+//Used methods
 void createTriangle();
 void createPlant();
+void createTree();
 void createDragon();
 void createHilbert();
 void createSnowWindow();
 void createNumberLines();
 void createWeirdness();
-
-
 void CreateFile(std::vector<char> &getValue, const std::string& fileExtention);
 void CreateFile(std::vector<int8_t> &getValue, const std::string& fileExtention);
 
-void createTree();
-
 int main() {
-    Type type;// = tree;
+    Type type;
 
+    //User input requested for generation
     std::cout << "Give a number accordingly of the list:" << std::endl;
     std::cout << "1: triangle"<< std::endl;
     std::cout << "2: plant"<< std::endl;
@@ -74,6 +73,8 @@ int main() {
         case weirdness:
             createWeirdness();
             break;
+        default:
+            std::cout << "Wrong input!" << std::endl;
     }
 
     return 0;
@@ -187,7 +188,6 @@ void createWeirdness(){
     CreateFile(getValue, "Weirdness");
 }
 
-
 void createNumberLines(){
     //1 is tekenen
     //0 is niet tekenen maar wel verplaatsen
@@ -205,7 +205,6 @@ void createNumberLines(){
 
     CreateFile(getValue, "Numberlines");
 }
-
 
 void CreateFile(std::vector<char> &getValue, const std::string& fileExtention) {//output getValue to file with timestamp
     std::string extention = fileExtention + std::to_string(time(0)) + ".txt";

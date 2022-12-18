@@ -10,6 +10,10 @@
 
 namespace std {
     template<typename SymbolType>
+    /**
+     * Hash override
+     * @tparam SymbolType
+     */
     struct hash<Production<SymbolType>> {
     std::size_t operator()(const Production<SymbolType> &production) const noexcept;
 };

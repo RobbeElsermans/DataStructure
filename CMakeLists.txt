@@ -34,10 +34,10 @@ target_include_directories(main PUBLIC
 
 add_executable(TestSuite
         "test/main.cpp"
-        test/L_System/U_Production.cpp
-        test/L_System/U_Validation.cpp
-        test/L_System/U_HelpFunctions.cpp
-        test/L_System/U_LSystemInterpreter.cpp)
+        test/lib/L_System/U_Production.cpp
+        test/lib/L_System/U_Validation.cpp
+        test/lib/L_System/U_HelpFunctions.cpp
+        test/lib/L_System/U_LSystemInterpreter.cpp)
 
 target_include_directories(TestSuite PUBLIC
         "include/"

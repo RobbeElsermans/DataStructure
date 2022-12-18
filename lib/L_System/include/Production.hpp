@@ -31,8 +31,8 @@ public:
 
     /**
      * The actual creat constructor that needs an predecessor an 1 or many successors
-     * @param predecessor
-     * @param successor
+     * @param predecessor SymbolType
+     * @param successor std::vector<SymbolType>
      */
     Production(SymbolType predecessor, std::vector<SymbolType> successor);
 
@@ -51,7 +51,7 @@ public:
 
     /**
      * define the equality operator between Productions classes
-     * @param str1
+     * @param str1 const Production<SymbolType>&
      * @return bool true if equal, false if not
      */
     bool operator==(const Production<SymbolType>& str1) const;

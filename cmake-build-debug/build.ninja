@@ -170,33 +170,33 @@ build CMakeFiles/TestSuite.dir/test/main.cpp.o: CXX_COMPILER__TestSuite_Debug /h
   OBJECT_DIR = CMakeFiles/TestSuite.dir
   OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test
 
-build CMakeFiles/TestSuite.dir/test/L_System/U_Production.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/L_System/U_Production.cpp || cmake_object_order_depends_target_TestSuite
-  DEP_FILE = CMakeFiles/TestSuite.dir/test/L_System/U_Production.cpp.o.d
+build CMakeFiles/TestSuite.dir/test/lib/L_System/U_Production.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/lib/L_System/U_Production.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/test/lib/L_System/U_Production.cpp.o.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
   OBJECT_DIR = CMakeFiles/TestSuite.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/L_System
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/lib/L_System
 
-build CMakeFiles/TestSuite.dir/test/L_System/U_Validation.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/L_System/U_Validation.cpp || cmake_object_order_depends_target_TestSuite
-  DEP_FILE = CMakeFiles/TestSuite.dir/test/L_System/U_Validation.cpp.o.d
+build CMakeFiles/TestSuite.dir/test/lib/L_System/U_Validation.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/lib/L_System/U_Validation.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/test/lib/L_System/U_Validation.cpp.o.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
   OBJECT_DIR = CMakeFiles/TestSuite.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/L_System
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/lib/L_System
 
-build CMakeFiles/TestSuite.dir/test/L_System/U_HelpFunctions.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/L_System/U_HelpFunctions.cpp || cmake_object_order_depends_target_TestSuite
-  DEP_FILE = CMakeFiles/TestSuite.dir/test/L_System/U_HelpFunctions.cpp.o.d
+build CMakeFiles/TestSuite.dir/test/lib/L_System/U_HelpFunctions.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/lib/L_System/U_HelpFunctions.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/test/lib/L_System/U_HelpFunctions.cpp.o.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
   OBJECT_DIR = CMakeFiles/TestSuite.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/L_System
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/lib/L_System
 
-build CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/L_System/U_LSystemInterpreter.cpp || cmake_object_order_depends_target_TestSuite
-  DEP_FILE = CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o.d
+build CMakeFiles/TestSuite.dir/test/lib/L_System/U_LSystemInterpreter.cpp.o: CXX_COMPILER__TestSuite_Debug /home/robbe/Documents/GitHub/DataStructure/test/lib/L_System/U_LSystemInterpreter.cpp || cmake_object_order_depends_target_TestSuite
+  DEP_FILE = CMakeFiles/TestSuite.dir/test/lib/L_System/U_LSystemInterpreter.cpp.o.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -I/home/robbe/Documents/GitHub/DataStructure/include
   OBJECT_DIR = CMakeFiles/TestSuite.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/L_System
+  OBJECT_FILE_DIR = CMakeFiles/TestSuite.dir/test/lib/L_System
 
 
 # =============================================================================
@@ -206,7 +206,7 @@ build CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o: CXX_COM
 #############################################
 # Link the executable TestSuite
 
-build TestSuite: CXX_EXECUTABLE_LINKER__TestSuite_Debug CMakeFiles/TestSuite.dir/test/main.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_Production.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_Validation.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_HelpFunctions.cpp.o CMakeFiles/TestSuite.dir/test/L_System/U_LSystemInterpreter.cpp.o | liblSystemLib.a || liblSystemLib.a
+build TestSuite: CXX_EXECUTABLE_LINKER__TestSuite_Debug CMakeFiles/TestSuite.dir/test/main.cpp.o CMakeFiles/TestSuite.dir/test/lib/L_System/U_Production.cpp.o CMakeFiles/TestSuite.dir/test/lib/L_System/U_Validation.cpp.o CMakeFiles/TestSuite.dir/test/lib/L_System/U_HelpFunctions.cpp.o CMakeFiles/TestSuite.dir/test/lib/L_System/U_LSystemInterpreter.cpp.o | liblSystemLib.a || liblSystemLib.a
   FLAGS = -g
   LINK_LIBRARIES = liblSystemLib.a
   OBJECT_DIR = CMakeFiles/TestSuite.dir
