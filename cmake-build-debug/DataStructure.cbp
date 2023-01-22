@@ -213,16 +213,16 @@
 		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/src/main.cpp">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_HelpFunctions.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/lib/L_System/U_HelpFunctions.cpp">
 			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_LSystemInterpreter.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/lib/L_System/U_LSystemInterpreter.cpp">
 			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_Production.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/lib/L_System/U_Production.cpp">
 			<Option target="TestSuite"/>
 		</Unit>
-		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/L_System/U_Validation.cpp">
+		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/lib/L_System/U_Validation.cpp">
 			<Option target="TestSuite"/>
 		</Unit>
 		<Unit filename="/home/robbeelsermans/Documents/gitHub/DataStructure/test/main.cpp">

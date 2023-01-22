@@ -46,3 +46,9 @@ target_include_directories(TestSuite PUBLIC
 
 target_link_libraries(TestSuite PUBLIC lSystemLib)
 target_link_libraries(main PUBLIC lSystemLib)
+
+target_compile_options(
+        lSystemLib
+        PUBLIC
+-Wall -Wextra -Wpedantic -Werror
+)

@@ -60,6 +60,7 @@ def main():
 
     # disable when drawing needed
     turtle_screen.tracer(0)
+
     turtle.left(90)
 
     #turtle.penup()
@@ -77,7 +78,7 @@ def main():
     # 6 -> numberLines
     # 7 -> weirdness
     # 8 -> forrest
-    typen = 7
+    typen = 6
 
     if typen == 0:
         text = fileinput.input("../output/Triangle1671222347.txt").readline()
@@ -101,10 +102,10 @@ def main():
         turtle.penup()
         turtle.goto(500, -500)
         turtle.pendown()
-        text = fileinput.input("../output/Numberlines1671222363.txt").readline()
+        text = fileinput.input("../output/Numberlines1674390054.txt").readline()
         drawInteger(text, 2, 90, 90)
     elif typen == 7:
-        text = fileinput.input("../output/Weirdness1671222366.txt").readline()
+        text = fileinput.input("../output/Weirdness1674319993.txt").readline()
         draw(text, 2, 90, 90)
     elif typen == 8:
         text = fileinput.input("../output/Tree1671222360.txt").readline()

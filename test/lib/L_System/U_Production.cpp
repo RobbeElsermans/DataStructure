@@ -11,7 +11,7 @@ TEST_CASE("test the constructor and get functions"){
 
     CHECK(p.getPredecessor() == 'A');
 
-    for (int i = 0; i < p.getSuccessor().size(); ++i) {
+    for (int i = 0; i < (int)p.getSuccessor().size(); ++i) {
         CHECK(p.getSuccessor()[i] == v[i]);
     }
 }

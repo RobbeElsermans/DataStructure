@@ -1,0 +1,13 @@
+Hello everyone, 
+
+I choze the project L-system because it looked fun to make a thee on its own.
+
+I completed all the tasks that was listed in the assignment such as the given class and methods formats, A production, Validation and L-system class with each an unit test. 
+
+Also a generation method in the L-system. To make things al little easier, I made a small console program so that the user can choose with item it wants to generate.
+
+To see whats going on, I created a Python script that reads the generated file and draws it with turtle.
+
+The things I didn't do but wanted to do are: 1 control GUI for the whole L-system so that the user can select an item and the GUI draws it.
+
+Also an own geometric implementation of a system I didn't do. This picture on the side is something I found when I was experimenting with the productions. 

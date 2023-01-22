@@ -166,7 +166,7 @@ void createSnowWindow(){
             Production<char>{'F', {'F','F','-','F','-','-','F','-','F'}}
     };
 
-    const std::unordered_set<char> alphabet{'A','B','F','-','+'};
+    const std::unordered_set<char> alphabet{'F','-','+'};
 
     std::vector<char> getValue = LSystemInterpreter<char>(axiom, productions, alphabet).generate(5);
 
