@@ -78,13 +78,13 @@ def main():
     # 6 -> numberLines
     # 7 -> weirdness
     # 8 -> forrest
-    typen = 6
+    typen = 5
 
     if typen == 0:
         text = fileinput.input("../output/Triangle1671222347.txt").readline()
         draw(text, 2, 60, 60)
     elif typen == 1:
-        text = fileinput.input("../output/Plant1671222350.txt").readline()
+        text = fileinput.input("../output/Plant1674475501.txt").readline()
         draw(text, 3, 25, 25)
     elif typen == 2:
         text = fileinput.input("../output/Hilbert1671222355.txt").readline()
@@ -96,7 +96,7 @@ def main():
         text = fileinput.input("../output/SnowWindow1671222358.txt").readline()
         draw(text, 3, 90, 90)
     elif typen == 5:
-        text = fileinput.input("../output/Tree1671222360.txt").readline()
+        text = fileinput.input("../output/Tree1674474982.txt").readline()
         draw(text, 5, 22.5, 22.5)
     elif typen == 6:
         turtle.penup()
@@ -105,7 +105,7 @@ def main():
         text = fileinput.input("../output/Numberlines1674390054.txt").readline()
         drawInteger(text, 2, 90, 90)
     elif typen == 7:
-        text = fileinput.input("../output/Weirdness1674319993.txt").readline()
+        text = fileinput.input("../output/Weirdness1674475556.txt").readline()
         draw(text, 2, 90, 90)
     elif typen == 8:
         text = fileinput.input("../output/Tree1671222360.txt").readline()
